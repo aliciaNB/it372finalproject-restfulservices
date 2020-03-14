@@ -2,22 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | IT372 Final Project</title>
+    <title>Consume API | IT372 Final Project</title>
     <div th:replace="fragments/headerfrag :: headerfrag"></div>
     <!-- Your custom links and scripts here -->
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <span class="navbar-brand">Team Add - a - div</span>
+    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="home">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="consume">Consume MailChimp API</a>
             </li>
             <li class="nav-item">
@@ -26,7 +26,7 @@
         </ul>
     </div>
 </nav>
-<h2 class="text-center mtb-3">IT 372 Final Project | RESTful Services</h2>
+<h2 class="text-center mtb-3">Consuming RESTful Service | MailChimp API</h2>
 <div th:replace="fragments/scriptsfrag :: scriptsfrag"></div>
 <!-- Your custom scripts go here -->
 </body>
