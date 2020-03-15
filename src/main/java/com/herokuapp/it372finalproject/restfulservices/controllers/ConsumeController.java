@@ -46,7 +46,8 @@ public class ConsumeController {
            }
            else
            {
-               bindingResult.reject("global", "Unable to subscribe " + subscribe.getEmail() + ". Please check email provided is valid");
+               bindingResult.reject("global", "Unable to subscribe " + subscribe.getEmail()
+                       + ". Please check provided email is spelled correctly. Or, email is not already subscribed.");
                return "consume";
            }
         }
