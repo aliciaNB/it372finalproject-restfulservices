@@ -1,6 +1,7 @@
 package com.herokuapp.it372finalproject.restfulservices.services.mailchimp;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -68,11 +69,12 @@ public class MailChimpAPI {
      * @param email email to add NewsletterSub tag
      * @return restTemplate API call to post "NewsletterSub" tag
      */
-    public Tags addNewsletterTag(String email)
+    public ResponseEntity<Tags> addNewsletterTag(String email)
     {
         String newTagsURI = newTagsURI(email);
         Tags newTags = createNewsletterTag();
-        return this.restTemplate.postForObject(newTagsURI, newTags, Tags.class);
+        //return this.restTemplate.postForObject(newTagsURI, newTags, Tags.class); <- this version return should be void
+        return this.restTemplate.postForEntity(newTagsURI, newTags, Tags.class);
     }
 
     //NOTE method to build custom uri to query a subscriber status
