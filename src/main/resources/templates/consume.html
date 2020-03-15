@@ -7,8 +7,8 @@
     <!-- Your custom links and scripts here -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <span class="navbar-brand">Team Add - a - div</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,7 +18,7 @@
                 <a class="nav-link" href="home">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="consume">Consume MailChimp API</a>
+                <a class="nav-link" href="consume">MailChimp API</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="service">SKTools Events API</a>
@@ -26,7 +26,27 @@
         </ul>
     </div>
 </nav>
-<h2 class="text-center mtb-3">Consuming RESTful Service | MailChimp API</h2>
+<h2 class="text-center mt-5 mb-5">Consuming MailChimp API RESTful Service</h2>
+<div class="container col-6">
+    <div class="card shadow">
+        <div class="card-header">
+            Subscribe to MailChimp Newsletter Mailing List
+        </div>
+        <div class="card-body">
+            <form>
+                <label for="fname">First Name</label>
+                <input class="form-control" name="firstname" id="fname">
+                <label for="lname">Last Name</label>
+                <input class="form-control" name="lastname" id="lname">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" id="email">
+                <div class="text-center mt-4 mb-4">
+                    <button type="submit" class="btn btn-primary col-3">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div th:replace="fragments/scriptsfrag :: scriptsfrag"></div>
 <!-- Your custom scripts go here -->
 </body>
