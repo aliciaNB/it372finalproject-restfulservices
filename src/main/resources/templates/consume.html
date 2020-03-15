@@ -29,19 +29,19 @@
 <h2 class="text-center mt-5 mb-5">Consuming MailChimp API RESTful Service</h2>
 <div class="container col-6">
     <div class="card shadow">
-        <div class="card-header">
+        <div class="card-header text-center">
             Subscribe to MailChimp Newsletter Mailing List
         </div>
         <div class="card-body">
-            <form>
+            <form action="#" th:action="@{/consume}" th:object="${subscribe}" method="post">
                 <label for="fname">First Name</label>
-                <input class="form-control" name="firstname" id="fname">
+                <input class="form-control" name="firstname" id="fname" th:field="*{fname}">
                 <label for="lname">Last Name</label>
-                <input class="form-control" name="lastname" id="lname">
+                <input class="form-control" name="lastname" id="lname"th:field="*{lname}">
                 <label for="email">Email</label>
-                <input class="form-control" name="email" id="email">
+                <input class="form-control" name="email" id="email"th:field="*{email}">
                 <div class="text-center mt-4 mb-4">
-                    <button type="submit" class="btn btn-primary col-3">Subscribe</button>
+                    <button class="btn btn-primary col-3" type="submit" value="submit">Subscribe</button>
                 </div>
             </form>
         </div>
