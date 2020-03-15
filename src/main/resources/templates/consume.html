@@ -34,12 +34,21 @@
         </div>
         <div class="card-body">
             <form action="#" th:action="@{/consume}" th:object="${subscribe}" method="post">
-                <label for="fname">First Name</label>
-                <input class="form-control" name="firstname" id="fname" th:field="*{fname}">
-                <label for="lname">Last Name</label>
-                <input class="form-control" name="lastname" id="lname"th:field="*{lname}">
-                <label for="email">Email</label>
-                <input class="form-control" name="email" id="email"th:field="*{email}">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input class="form-control" type="text" name="firstname" id="fname" th:field="*{fname}" />
+                    <small class="text-danger" th:if="${#fields.hasErrors('fname')}" th:errors="*{fname}">First Name Error</small>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input class="form-control" type="text" name="lastname" id="lname" th:field="*{lname}" />
+                    <small class="text-danger" th:if="${#fields.hasErrors('lname')}" th:errors="*{lname}">Last Name Error</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" th:field="*{email}" />
+                    <small class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</small>
+                </div>
                 <div class="text-center mt-4 mb-4">
                     <button class="btn btn-primary col-3" type="submit" value="submit">Subscribe</button>
                 </div>
