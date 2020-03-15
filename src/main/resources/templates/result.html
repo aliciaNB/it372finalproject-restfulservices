@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribed | IT372 Final Project</title>
+    <div th:replace="fragments/headerfrag :: headerfrag"></div>
+    <!-- Your custom links and scripts here -->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <span class="navbar-brand">Team Add - a - div</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consume">MailChimp API</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="service">SKTools Events API</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h2 class="text-center mt-5"></h2>
+<div class="container col-6">
+    <div class="card shadow">
+        <div class="card-header alert-success text-center">
+            Successfully Subscribed to MailChimp Newsletter
+        </div>
+        <div class="card-body text-center">
+            <p th:text="'Thanks, ' + ${subscribe.fname} + ' ' + ${subscribe.lname} + '!'" />
+            <p th:text="'Please check your ' + ${subscribe.email} + ' inbox for confirmation!'" />
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/scriptsfrag :: scriptsfrag"></div>
+<!-- Your custom scripts go here -->
+</body>
+</html>
